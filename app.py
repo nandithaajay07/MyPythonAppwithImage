@@ -1,6 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
+
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hello from Jenkins-built Dockerized Flask app!"
+    return render_template("index.html")
+
